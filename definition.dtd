@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--este es el circuito guardado-->
+
+<!ELEMENT circuit (declarative,conection)>
+
+<!ELEMENT declarative (logicgate+)>
+
+<!ELEMENT logicgate EMPTY>
+<!ATTLIST logicgate serial ID #REQUIRED>
+<!ATTLIST logicgate type (i|o|a|b|c|d|e|f|g) #REQUIRED>
+<!ATTLIST logicgate xposition NMTOKENS #REQUIRED>
+<!ATTLIST logicgate yposition NMTOKENS #REQUIRED>
+<!ATTLIST logicgate numofinputs NMTOKENS #REQUIRED>
+
+<!ELEMENT conection (conector*)>
+
+<!ELEMENT conector EMPTY>
+
+<!ATTLIST conector from IDREF #REQUIRED>
+<!ATTLIST conector to IDREF #REQUIRED>
+<!ATTLIST conector input NMTOKEN #REQUIRED>
